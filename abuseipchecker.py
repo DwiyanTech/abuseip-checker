@@ -4,21 +4,22 @@ from argparse import ArgumentParser
 
 class IpAbuseCheck:
 	def __init__(self):
-		print("[*] Abuse IP Checker By dwiyantech     [*]")
-		print("[*] IP Checker Massive Or Single IP    [*]")
-		print("[*]       Abuse IP Checker V1.0        [*]\n")
+		print("[*] Abuse IP Checker By dwiyantech  [*]")
+		print("[*] IP Checker Massive Or Single IP [*]")
+		print("[*]       Abuse IP Checker V1.0     [*]\n")
 
-		print("[*] Abuse IP Check Script Is Running\n")
+
 		parser = ArgumentParser()
 		parser.add_argument("-l","--list",required=False,help="your path of list ip")
 		parser.add_argument("-i","--ip",required=False,help="single ip you wanna check")
 		args_parse = parser.parse_args()
 
 		if args_parse.list is None and args_parse.ip is None:
-			print("Run -h to see all possible commands")
+			print("[*] Run -h to see all possible commands\n")
 			exit(0)
 			
 		if args_parse.list is not None:
+			print("[*] Abuse IP Check Script Is Running\n")
 			word = [word.strip() for word in open(args_parse.list,'r').readlines()]
 			for w in word:
 				if self.checkAbuseIPDB(w):
