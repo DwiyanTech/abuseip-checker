@@ -1,3 +1,11 @@
+
+# This script by Ahmad Dwiyan
+#
+# Any Risk take your own
+#
+# GNU Public License
+
+
 import requests, random
 from argparse import ArgumentParser
 
